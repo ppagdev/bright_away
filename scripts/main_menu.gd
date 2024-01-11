@@ -2,7 +2,7 @@ extends Control
 
 var backgroundScene = preload("res://scenes/background.tscn")
 var background = backgroundScene.instantiate()
-var backgroundImage = "res://assets/images/puzzle-texture.png"
+var backgroundImage = "res://assets/images/puzzle-texture-blue-background.png"
 
 func _ready():
 	background.setImage(backgroundImage)
