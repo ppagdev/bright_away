@@ -1,0 +1,42 @@
+[gd_scene load_steps=2 format=3 uid="uid://dm2dbsghfbigr"]
+
+[ext_resource type="Script" path="res://scripts/main_menu.gd" id="1_n6rmu"]
+
+[node name="MainMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+script = ExtResource("1_n6rmu")
+
+[node name="VSplitContainer" type="VSplitContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="GameTitle" type="Label" parent="VSplitContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 100
+text = "Bright Away"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="CenterContainer" type="CenterContainer" parent="VSplitContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="LevelSelectButton" type="Button" parent="VSplitContainer/CenterContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 60
+text = "Select Level"
+
+[connection signal="pressed" from="VSplitContainer/CenterContainer/LevelSelectButton" to="." method="_on_level_select_button_pressed"]
